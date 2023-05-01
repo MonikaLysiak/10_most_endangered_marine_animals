@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+<title> 10 MOST ENDANGERED MARINE SPECIES </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" media="screen" href="Styles/styl_meny_gorne.css" />
+<link rel="stylesheet" media="screen" href="Styles/styl_menu_boczne.css" />
+<link rel="stylesheet" media="screen" href="Styles/style.css" />
+<meta name="author" content="Monika Łysiak" />
+<meta name="keywords" content="AGH WORLD ENDANGERED ANIMALS" />
+<meta name="description" content="To jest strona internetowa stworzona na potrzeby zajęć z przedmiotu Techniki Internetowe."/>
+<link rel="shortcut icon"  type = "image/jpg" href="icons/otter-solid.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/76e2c6bcfc.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $('nav a').click(function(e) {
+      e.preventDefault();
+      var section = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(section).offset().top
+      }, 1000);
+    });
+  });
+
+  $(document).ready(function() {
+    $(window).scroll(function() {
+      var currentPosition = $(window).scrollTop();
+      if (currentPosition < 600) {
+        $('.nav-side').hide();
+        $('.nav-top').show();
+      } else {
+        $('.nav-side').show();
+        $('.nav-top').hide();
+      }
+    });
+  });
+</script>
+</head>
+<body style="margin: 0px;">
+  <div class="front-page" id="sekcja0">
+    <div class="all_images">
+      <img class="landing_page_image_container" src="https://www.freetheocean.com/wp-content/uploads/2023/03/free-the-ocean-blog_vacquita-facts_image-1.jpg" alt="VAQUITA PORPOISE">
+      <img class="landing_page_image_container" src="https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/hawksbill_sea_turtle.jpg?itok=ESbU98wo" alt="HAWKSBILL TURTLE">
+      <img class="landing_page_image_container" src="https://files.worldwildlife.org/wwfcmsprod/images/Blue_Whale/hero_full/ybr2e55kd_shutterstock_764499823.jpg" alt="BLUE WHALE">
+      <img class="landing_page_image_container" src="https://uploads.alaska.org/suppliers/lodging/A/alaska-wildland-adventures/kenai-fjords-glacier-lodge/_960xAUTO_fit_center-center_65_none/Kenai-Fjords-Glacier-Lodge-Sea-otter-D-opt2019.jpg?mtime=20190627142228&focal=none&tmtime=20210713141251" alt="SEA OTTER">
+      <img class="landing_page_image_container" src="https://www.travelandleisure.com/thmb/lx-ybZJHUW3d9vnqU0p8sm_v7fk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/whalesharks-cenderawasih-bay-indonesia-WHALESHARKS0220-21de244da3c04bcfb373620a4f97f0f4.jpg" alt="WHALE SHARK">
+      <img class="landing_page_image_container" src="https://cdn.britannica.com/54/158754-050-CFE5C585/Galapagos-penguin.jpg" alt="GALAPAGOS PENGUIN">
+      <img class="landing_page_image_container" src="https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/2448x1632-hectors-dolphin-steve-dawson.jpg?itok=INWH4s69" alt="HECTOR'S DOLPHIN">
+      <img class="landing_page_image_container" src="https://marinesanc.wpenginepowered.com/wp-content/uploads/2021/11/Larry-Koester-humphead-wrasse-700x465.jpg" alt="HUMPHEAD WRASSE">
+      <img class="landing_page_image_container" src="https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/hawaiian_monk_seal.jpg?itok=ViAwBaKm" alt="HAWAIIAN MONK SEAL">
+    </div>
+    <div class="bone">
+      <i class="fa-solid fa-bone"></i>
+    </div>
+
+  </div>
+    <script>
+      const arrofimages = document.querySelectorAll(".landing_page_image_container");
+
+      function myRandomInts(quantity, max){
+        var arr = [];
+
+        while(arr.length < quantity){
+          var candidateInt = Math.floor(Math.random() * max);
+
+          if(arr.indexOf(candidateInt) === -1)
+            arr.push(candidateInt);
+        }
+
+        return(arr)
+      }
+
+       const imagescres = ["https://www.freetheocean.com/wp-content/uploads/2023/03/free-the-ocean-blog_vacquita-facts_image-1.jpg", 
+        "https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/hawksbill_sea_turtle.jpg?itok=ESbU98wo",  
+        "https://files.worldwildlife.org/wwfcmsprod/images/Blue_Whale/hero_full/ybr2e55kd_shutterstock_764499823.jpg",
+        "https://uploads.alaska.org/suppliers/lodging/A/alaska-wildland-adventures/kenai-fjords-glacier-lodge/_960xAUTO_fit_center-center_65_none/Kenai-Fjords-Glacier-Lodge-Sea-otter-D-opt2019.jpg?mtime=20190627142228&focal=none&tmtime=20210713141251",
+        "https://www.travelandleisure.com/thmb/lx-ybZJHUW3d9vnqU0p8sm_v7fk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/whalesharks-cenderawasih-bay-indonesia-WHALESHARKS0220-21de244da3c04bcfb373620a4f97f0f4.jpg",
+        "https://cdn.britannica.com/54/158754-050-CFE5C585/Galapagos-penguin.jpg",
+        "https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/2448x1632-hectors-dolphin-steve-dawson.jpg?itok=INWH4s69",
+        "https://marinesanc.wpenginepowered.com/wp-content/uploads/2021/11/Larry-Koester-humphead-wrasse-700x465.jpg",
+        "https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/hawaiian_monk_seal.jpg?itok=ViAwBaKm",
+        "https://www.biologicaldiversity.org/assets/img/species/mammals/NorthAtlanticRightWhaleFloridaFWCC.jpg"];
+      
+      function changeImage() {
+        var x = myRandomInts(9, 10);
+        for (let i = 0; i < 9; i += 1) {
+          var j = x[i];
+          arrofimages[i].src = imagescres[j];
+        }
+      }
+      setInterval(changeImage, 3000);
+    </script>
+  <header>
+    <div class="logo_container">
+      <i class = "logo fa-solid fa-otter"></i>
+    </div>
+    <div class="head_title">
+      <span style="font-size: larger;">10</span> OF THE WORLD'S MOST ENDANGERED ANIMALS
+    </div>
+    <nav class="nav-top">
+        <div class="sek-num">
+            <a href="#sekcja1" >1</a>
+            <a href="#sekcja2" >2</a>
+            <a href="#sekcja3" >3</a>
+            <a href="#sekcja4" >4</a>
+            <a href="#sekcja5" >5</a>
+            <a href="#sekcja6" >6</a>
+            <a href="#sekcja7" >7</a>
+            <a href="#sekcja8" >8</a>
+            <a href="#sekcja9" >9</a>
+            <a href="#sekcja10" >10</a>
+        </div>
+        <div class="shorts">
+          <a href="#sekcja1" >1. porpoise</a>
+          <a href="#sekcja2" >2. turtle</a>
+          <a href="#sekcja3" >3. whale</a>
+          <a href="#sekcja4" >4. otter</a>
+          <a href="#sekcja5" >5. shark</a>
+          <a href="#sekcja6" >6. penguin</a>
+          <a href="#sekcja7" >7. dolphin</a>
+          <a href="#sekcja8" >8. wrasse</a>
+          <a href="#sekcja9" >9._monk_seal</a>
+          <a href="#sekcja10" >10. whale</a>
+        </div>
+        <div class="fullnames">
+            <a href="#sekcja1">1. vaquita porpoise</a>
+            <a href="#sekcja2">2. hawksbill turtle</a>
+            <a href="#sekcja3">3. blue whale</a>
+            <a href="#sekcja4">4. sea otter</a>
+            <a href="#sekcja5">5. whale shark</a>
+            <a href="#sekcja6">6. galapagos penguin</a>
+            <a href="#sekcja7">7. hector's dolphin</a>
+            <a href="#sekcja8">8. humphead wrasse</a>
+            <a href="#sekcja9">9. hawaiian monk seal</a>
+            <a href="#sekcja10">10. right whale</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container-main container">
+  <div id="sekcja1" class="container">
+      <h1>1. VAQUITA PORPOISE</h1>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      <br>
+      <br>
+      <div class="image_container">
+        <img class="image1" src="https://www.freetheocean.com/wp-content/uploads/2023/03/free-the-ocean-blog_vacquita-facts_image-1.jpg" alt="VAQUITA PORPOISE">
+        <a  href ="https://thevaquitaporpoise.wordpress.com/">odsyłacz do witryny - źródła obrazu </a>
+      </div>
+      <br>
+      <h2>Habitat</h2>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      <h3>Threats</h3>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+  </div>
+  <hr class="newstyle">
+  <div id="sekcja2" class="container">
+      <h1>2. HAWKSBILL TURTLE</h1>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      <br>
+      <br>
+      <div class="image_container">
+      <img class="image1" src="https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/hawksbill_sea_turtle.jpg?itok=ESbU98wo" alt="HAWKSBILL TURTLE">
+      <a href ="https://www.fisheries.noaa.gov/species/hawksbill-turtle">odsyłacz do witryny - źródła obrazu</a>
+      </div>
+      <br>
+  </div>
+  <hr class="newstyle">
+  <div id="sekcja3" class="container">
+      <h1>3. BLUE WHALE</h1>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      <br>
+      <br>
+      <div class="image_container">
+        <img class="image1" src="https://files.worldwildlife.org/wwfcmsprod/images/Blue_Whale/hero_full/ybr2e55kd_shutterstock_764499823.jpg" alt="BLUE WHALE">
+         <a href ="https://www.worldwildlife.org/species/blue-whale">odsyłacz do witryny - źródła obrazu</a>
+      </div>
+    </div>
+  <hr class="newstyle">
+  <div id="sekcja4" class="container">
+      <h1>4. SEA OTTER</h1>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      <br>
+      <br>
+      <div class="image_container">
+        <img class="image1" src="https://uploads.alaska.org/suppliers/lodging/A/alaska-wildland-adventures/kenai-fjords-glacier-lodge/_960xAUTO_fit_center-center_65_none/Kenai-Fjords-Glacier-Lodge-Sea-otter-D-opt2019.jpg?mtime=20190627142228&focal=none&tmtime=20210713141251" alt="SEA OTTER">
+        <a href ="https://www.alaska.org/advice/sea-otter">odsyłacz do witryny - źródła obrazu</a>
+      </div>
+      <br>
+    </div>
+  <div id="sekcja5" class="container">
+    <h1>5. WHALE SHARK</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <br>
+    <br>
+    <div class="image_container">
+      <img class="image1" src="https://www.travelandleisure.com/thmb/lx-ybZJHUW3d9vnqU0p8sm_v7fk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/whalesharks-cenderawasih-bay-indonesia-WHALESHARKS0220-21de244da3c04bcfb373620a4f97f0f4.jpg" alt="WHALE SHARK">
+      <a  href ="https://www.travelandleisure.com/trip-ideas/whale-shark-diving-cenderawasih-bay-indonesia">odsyłacz do witryny - źródła obrazu </a>
+    </div>
+    <br>
+    <h2>Habitat</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <h3>Threats</h3>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+  </div>
+  <hr class="newstyle">
+  <div id="sekcja6" class="container">
+    <h1>6. GALAPAGOS PENGUIN</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <br>
+    <br>
+    <div class="image_container">
+      <img class="image1" src="https://cdn.britannica.com/54/158754-050-CFE5C585/Galapagos-penguin.jpg" alt="GALAPAGOS PENGUIN">
+      <a  href ="https://www.britannica.com/animal/Galapagos-penguin">odsyłacz do witryny - źródła obrazu </a>
+    </div>
+    <br>
+    <h2>Habitat</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <h3>Threats</h3>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+  </div>
+  <hr class="newstyle">
+  <div id="sekcja7" class="container">
+    <h1>7. HECTOR'S DOLPHIN</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <br>
+    <br>
+    <div class="image_container">
+      <img class="image1" src="https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/2448x1632-hectors-dolphin-steve-dawson.jpg?itok=INWH4s69" alt="HECTOR'S DOLPHIN">
+      <a  href ="https://www.fisheries.noaa.gov/species/hectors-dolphin">odsyłacz do witryny - źródła obrazu </a>
+    </div>
+    <br>
+    <h2>Habitat</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <h3>Threats</h3>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+  </div>
+  <hr class="newstyle">
+  <div id="sekcja8" class="container">
+    <h1>8. HUMPHEAD WRASSE</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <br>
+    <br>
+    <div class="image_container">
+      <img class="image1" src="https://marinesanc.wpenginepowered.com/wp-content/uploads/2021/11/Larry-Koester-humphead-wrasse-700x465.jpg" alt="HUMPHEAD WRASSE">
+      <a  href ="https://marinesanctuary.org/blog/sea-wonder-humphead-wrasse/">odsyłacz do witryny - źródła obrazu </a>
+    </div>
+    <br>
+    <h2>Habitat</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <h3>Threats</h3>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+  </div>
+  <hr class="newstyle">
+  <div id="sekcja9" class="container">
+    <h1>9. HAWAIIAN MONK SEAL</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <br>
+    <br>
+    <div class="image_container">
+      <img class="image1" src="https://www.fisheries.noaa.gov/s3/styles/full_width/s3/dam-migration/hawaiian_monk_seal.jpg?itok=ViAwBaKm" alt="HAWAIIAN MONK SEAL">
+      <a  href ="https://www.fisheries.noaa.gov/species/hawaiian-monk-seal">odsyłacz do witryny - źródła obrazu </a>
+    </div>
+    <br>
+    <h2>Habitat</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <h3>Threats</h3>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+  </div>
+  <hr class="newstyle">
+  <div id="sekcja10" class="container">
+    <h1>10. NORTH ATLANTIC RIGHT WHALE</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <br>
+    <br>
+    <div class="image_container">
+      <img class="image1" src="https://www.biologicaldiversity.org/assets/img/species/mammals/NorthAtlanticRightWhaleFloridaFWCC.jpg" alt="NORTH ATLANTIC RIGHT WHALE">
+      <a  href ="https://www.biologicaldiversity.org/species/mammals/North_Atlantic_right_whale/">odsyłacz do witryny - źródła obrazu </a>
+    </div>
+    <br>
+    <h2>Habitat</h2>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <h3>Threats</h3>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <br>
+    <br>
+    <hr class="newstyle">
+  </div>
+
+  <div id="sekcja11" class="container">
+    <h1>SUMMARY</h1>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+    <br>
+    <br>
+    <div class="itemset">
+      <div class="list1" >
+        <ul >
+          <li>Element listy nienumerowanej</li>
+          <li>Element listy nienumerowanej</li>
+          <li>Element listy nienumerowanej</li>
+          <li>Element listy nienumerowanej</li>
+      </ul> 
+      </div>
+      <div  class="list1" >
+        <ol >
+          <li>Element listy numerowanej</li>
+          <li>Element listy numerowanej</li>
+          <li>Element listy numerowanej</li>
+          <li>Element listy numerowanej</li>
+      </ol> 
+      </div>
+      <div class="table1" >
+        <p style="text-align: center;"> A tu poniżej znajduje się tabela:</p>
+        <table style="border: 1px solid; border-color: white;">
+          <tr>
+            <th>Kolumna1</th>
+            <th>Kolumna2</th>
+            <th>Kolumna3</th>
+            <th>Kolumna4</th>
+          </tr>
+          <tr>
+            <td>Dane1</td>
+            <td>Dane2</td>
+            <td colspan="2">Dane34</td>
+          </tr>
+          <tr>
+            <td>Dane1</td>
+            <td>Dane2</td>
+            <td>Dane3</td>
+            <td>Dane4</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<nav class="nav-side">
+  <div class="reference3">
+      <a href="#sekcja0" class="fa-solid fa-house"></a>
+      <a href="#sekcja1" >1</a>
+      <a href="#sekcja2" >2</a>
+      <a href="#sekcja3" >3</a>
+      <a href="#sekcja4" >4</a>
+      <a href="#sekcja5" >5</a>
+      <a href="#sekcja6" >6</a>
+      <a href="#sekcja7" >7</a>
+      <a href="#sekcja8" >8</a>
+      <a href="#sekcja9" >9</a>
+      <a href="#sekcja10" >10</a>
+  </div>
+</nav>
+<footer>
+    <hr class="newstyle">
+    Monika Łysiak, 2023 ©
+</footer>
+</body>
+</html>
