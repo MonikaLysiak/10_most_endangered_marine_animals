@@ -11,5 +11,5 @@ Here are some screenshots of it:
 ![image](https://github.com/MonikaLysiak/10_most_endangered_marine_animals/assets/104469525/7718bf55-34e1-420a-8655-6f705f1bd1d5)
 
 ## Comments
-Unfortunately there is only lorem ipsum content for now. The main purpose was to learn how to create website, style it nad create animations. It is not jet done and will be improved over time.
+Unfortunately there is only lorem ipsum content for now. The main purpose was to learn how to create website, style it nad create animations. It is not yet done and will be improved over time.
 
